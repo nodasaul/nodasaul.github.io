@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>VIS Project</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css"
+          rel="stylesheet"
+          type='text/css'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+          type='text/css'>
+
+
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+
+    <link href="css/health.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-center-simple.min.css"/>
+</head>
+
+<body>
+<div id="preloader">
+    <div class="text"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="collapse navbar-collapse center" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="post.html">Sample Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('images/health-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>Global Health Infrastructure</h1>
+                    <span class="subheading">Visualising Global health infrastructure and Life Expectancy</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- MAP -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row card-title">
+                        <div class="col-md-6">
+                            <h5>Life Expectancy</h5>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <span class="badge badge-dark">
+                                <span id="year">Year: 1995</span>
+                            <div>
+                                <input type="range" name="points" min="1995" max="2015" step="1" value="1995"
+                                       id="slider-time" class="slider">
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="choropleth">
+                            <svg width="878" height="450">
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DATATABLE -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Where are the top hospitals located?</h5>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <span class="badge badge-dark">
+                                <b id="top_h">Top 100</b>
+                            <div>
+                                <input type="range" name="points" min="1995" max="2015" step="1" value="1995"
+                                       id="slider-rank" class="slider">
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <small>
+                                <table id="hospitals" class="table table-striped table-bordered"></table>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Per Capita Health Spending | GDP Per Capita -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6" id="scatter">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Per Capita Health Spending</h5>
+                            <svg width="500" height="250"></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" id="histogram">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">GDP Per Capita</h5>
+                            <svg width="550" height="250"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <svg width="282" height="100"></svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p class="copyright text-muted">Copyright &copy; Thesaulin 2018</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/health.js"></script>
+
+<script src="js/scatter.js"></script>
+<script src="js/choropleth.js"></script>
+<script src="js/histogram.js"></script>
+<script src="js/hosptab.js"></script>
+
+<script>
+    $(document).ready(function () {
+        paceOptions = {
+            ajax: true,
+            document: true,
+            eventLag: false
+        };
+
+        Pace.on('done', function () {
+            $('#preloader').delay(500).fadeOut(800);
+        });
+
+        $('#hospitals').DataTable({
+            "ajax": 'data/world_hospitals.json',
+            "pageLength": 5,
+            "order": [[1, "asc"]],
+            columns: [
+                //desconocido - ranking - Instituto	Country - Size - Visibilidad - Ficheros ricos - scholar
+                {"title": "unknown", "visible": false},
+                {"title": "Rank", "width": "5%",},
+                {"title": "Institute", "width": "50%",},
+                {"title": "Size", "visible": false},
+                {"title": "Visibilidad", "visible": false},
+                {"title": "Rich Files", "visible": false},
+                {"title": "Scholar", "visible": false},
+                {"title": "country", "width": "45%",}
+            ]
+        });
+
+        // this function is called after the HTML document is fully loaded
+        var GeoData;
+        var nested_Hrank;
+        var filtered_rank;
+
+        //event listener for slider change
+        var time_slider = document.getElementById("slider-time");
+        var rank_slider = document.getElementById("slider-rank");
+
+        var initVis = function () {
+            //Create a eventHandler
+            var MyEventHandler = new Object();
+
+            //Instantiate all Vis Objects here
+            var scatter = new Scatter(d3.select('#scatter'), GeoData, MyEventHandler);
+            var choropleth = new Choropleth(d3.select('#choropleth'), GeoData, MyEventHandler);
+            var histogram = new Histogram(d3.select('#histogram'), GeoData, MyEventHandler);
+
+            //var hosptab = new HospTab(d3.select('#HospTab'), GeoData, nested_Hrank, "cRank", MyEventHandler);
+
+            time_slider.addEventListener("change", function () {
+                //document.getElementById("slider-time").textContent = rangeInput.value;
+                Merge_Geo(time_slider.value);
+                choropleth.onSelectionChange(GeoData);
+                scatter.onSelectionChange(GeoData);
+                histogram.onSelectionChange(GeoData);
+                document.getElementById("year").innerHTML = "Year: " + time_slider.value;
+            }, false);
+
+            rank_slider.addEventListener("change", function () {
+                RankSet(rank_slider.value);
+                //hosptab.onSelectionChange(nested_Hrank, "cRank");
+                document.getElementById("top_h").innerHTML = "TOP " + rank_slider.value;
+                document.getElementById("h_tab").innerHTML = "Where are the top hospitals located?";
+            }, false);
+
+            $(MyEventHandler).bind("selectionChangedScatter", function (event, e) {
+                histogram.onSelectionChangeScatter(e);
+                choropleth.onSelectionChangeScatter(e);
+                //hosptab.onSelectionChangeScatter(e);
+            });
+
+            $(MyEventHandler).bind("selectionChangedHistogram", function (event, e) {
+                scatter.onSelectionChangeHistogram(e);
+                choropleth.onSelectionChangeHistogram(e);
+                //hosptab.onSelectionChangeHistogram(e);
+            });
+
+            $(MyEventHandler).bind("geoCountrySelect", function (event, cname) {
+                RankSet(rank_slider.value);
+                CountryHosp(cname);
+                //hosptab.onSelectionChange(C_hosp_rank, "cHosp");
+                document.getElementById("h_tab").innerHTML = 'Hospitals in <b><font size="3" color="red">' + cname + '</font></b>';
+            });
+
+            $(MyEventHandler).bind("countryRank", function (event, s) {
+                RankSet(rank_slider.value);
+                //hosptab.onSelectionChange(nested_Hrank, "cRank");
+                document.getElementById("h_tab").innerHTML = "Where are the top hospitals located?";
+            });
+        };
+
+        // call this function after both files are loaded &#45;&#45; error should be "null" if no error
+        var dataLoaded = function (error, _Data_le, _Data_pcap, _Data_p1000, _Data_gdp, _GeoData, _HRank) {
+            if (!error) {
+                GeoData = _GeoData;
+                //mapping all data to _Data
+                Data_le = _Data_le;
+                Data_pcap = _Data_pcap;
+                Data_p1000 = _Data_p1000;
+                Data_gdp = _Data_gdp;
+                HRank = _HRank;
+
+                RankSet(100);
+                Merge_Geo(1995);
+
+                nested_Hrank.forEach(function (d) {
+                    matched_hosp = GeoData.features.filter(function (b) {
+                        return d.key.trim() === b.properties.name.trim();
+                    });
+                })
+            }
+            initVis();
+        };
+
+        var RankSet = function (rank) {
+            filtered_rank = HRank.filter(function (d) {
+                return parseInt(d.Rank) < rank;
+            });
+            nested_Hrank = d3.nest()
+                .key(function (d) {
+                    return d.Country.trim();
+                })
+                .rollup(function (leaves) {
+                    return leaves.length;
+                })
+                .entries(filtered_rank);
+            nested_Hrank = nested_Hrank.sort(function (a, b) {
+                return parseInt(b.values) - parseInt(a.values);
+            })
+        };
+        var CountryHosp = function (country) {
+            country_hosp = filtered_rank.filter(function (d) {
+                return d.Country.trim() === country.trim();
+            });
+            C_hosp_rank = country_hosp.map(function (d) {
+                return {
+                    "rank": d.Rank,
+                    "hospital": d.Hospital
+                };
+            });
+            C_hosp_rank = C_hosp_rank.sort(function (a, b) {
+                return parseInt(a.rank) - parseInt(b.rank);
+            })
+        };
+
+        var Merge_Geo = function (year) {
+            //Merge Geojson and parameter values
+            GeoData.features.forEach(function (d) {
+                var matched_le = Data_le.filter(function (a) {
+                    return a["Country Name"] === d.properties.name
+                });
+                var matched_pcap = Data_pcap.filter(function (a) {
+                    return a["Country Name"] === d.properties.name
+                });
+                var matched_p1000 = Data_p1000.filter(function (a) {
+                    return a["Country Name"] === d.properties.name
+                });
+                var matched_gdp = Data_gdp.filter(function (a) {
+                    return a["Country Name"] === d.properties.name
+                });
+                if (matched_le.length === 0 || matched_p1000.length === 0 || matched_pcap.length === 0) {
+                    d.properties.LE = 0;
+                    d.properties.pcap = 0;
+                    d.properties.p1000 = 0;
+                    d.properties.gdp = 0;
+                }
+                else {
+                    matched_le[0][year] = matched_le[0][year];
+                    d.properties.LE = matched_le[0][year];
+                    d.properties.pcap = matched_pcap[0][year];
+                    d.properties.p1000 = matched_p1000[0][year];
+                    d.properties.gdp = matched_gdp[0][year];
+                    d.properties.year = year;
+                }
+            })
+        };
+
+        //load the data from csv
+        var start_loading = function () {
+            queue()
+                .defer(d3.csv, "data/life_expectancy.csv")
+                .defer(d3.csv, "data/Percap_health_spending.csv")
+                .defer(d3.csv, "data/Physicians_per_1000.csv")
+                .defer(d3.csv, "data/gdp_percap.csv")
+                .defer(d3.json, "data/countries.geo.json")
+                .defer(d3.csv, "data/Hospital_Rank.csv")
+                .await(function (error, file_le, file_pcap, file_p1000, file_gdp, file_geo, file_hrank) {
+                    dataLoaded(error, file_le, file_pcap, file_p1000, file_gdp, file_geo, file_hrank);
+                });
+        };
+
+        start_loading();
+    });
+</script>
+</body>
+</html>
