@@ -112,9 +112,9 @@
                         </div>
                         <div class="col-md-6 text-right">
                             <span class="badge badge-dark">
-                                <b id="top_h">Top 100</b>
+                                <b id="top_h">Top 2000</b>
                             <div>
-                                <input type="range" name="points" min="1995" max="2015" step="1" value="1995"
+                                <input type="range" name="points" min="2000" max="2014" step="1" value="2000"
                                        id="slider-rank" class="slider">
                             </div>
                             </span>
@@ -294,7 +294,7 @@
                 HRank = _HRank;
 
                 RankSet(100);
-                Merge_Geo(1995);
+                Merge_Geo(2000);
 
                 nested_Hrank.forEach(function (d) {
                     matched_hosp = GeoData.features.filter(function (b) {
