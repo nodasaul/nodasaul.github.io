@@ -33,7 +33,7 @@ Choropleth.prototype.initVis = function () {
 
     this.color = d3.scale.linear()
         .domain([40, 60, 70, 75, 80])
-        .range(["MidnightBlue", "MediumBlue ", "Blue ", "RoyalBlue ", "LightSkyBlue"]);
+        .range([" MidnightBlue ", "MediumBlue ", "Blue", " lightBlue ", "LightSkyBlue"]);
 
     //Define path generator
     this.path = d3.geo.path()
