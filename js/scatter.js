@@ -35,7 +35,7 @@ Scatter.prototype.initVis = function () {
 
     this.color = d3.scale.linear()
         .domain([40, 60, 70, 75, 80])
-        .range(["MidnightBlue", "MediumBlue ", "Blue ", "DodgerBlue", "LightSkyBlue"]);
+        .range(["darkred", "red", "orange", "lightgreen", "green"]);
 
     that = this;
     this.brush = d3.svg.brush()
