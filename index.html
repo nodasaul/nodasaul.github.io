@@ -108,7 +108,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>Where are the top hospitals located?</h5>
+                            <h5 id="h_tab">Where are the top hospitals located?</h5>
                         </div>
                         <div class="col-md-6 text-right">
                             <span class="badge badge-dark">
@@ -272,7 +272,9 @@
                 RankSet(rank_slider.value);
                 CountryHosp(cname);
                 //hosptab.onSelectionChange(C_hosp_rank, "cHosp");
-                document.getElementById("h_tab").innerHTML = 'Hospitals in <b><font size="3" color="red">' + cname + '</font></b>';
+                document.getElementById("h_tab").innerHTML = 'Hospitals in ' + cname;
+
+                $('#hospitals').DataTable().search(cname).draw();
             });
 
             $(MyEventHandler).bind("countryRank", function (event, s) {
@@ -371,10 +373,10 @@
         //load the data from csv
         var start_loading = function () {
             queue()
-                .defer(d3.csv, "data/life_expectancy.csv")
-                .defer(d3.csv, "data/Percap_health_spending.csv")
-                .defer(d3.csv, "data/Physicians_per_1000.csv")
-                .defer(d3.csv, "data/gdp_percap.csv")
+                .defer(d3.csv, "data/updated/Life_expectancy.csv")
+                .defer(d3.csv, "data/updated/Health_expenditure.csv")
+                .defer(d3.csv, "data/updated/Physicians_per_1000.csv")
+                .defer(d3.csv, "data/updated/gdp_percap.csv")
                 .defer(d3.json, "data/countries.geo.json")
                 .defer(d3.csv, "data/Hospital_Rank.csv")
                 .await(function (error, file_le, file_pcap, file_p1000, file_gdp, file_geo, file_hrank) {
