@@ -35,7 +35,7 @@ Scatter.prototype.initVis = function () {
 
     this.color = d3.scale.linear()
         .domain([40, 60, 70, 75, 80])
-        .range(["Navy", "MediumBlue ", “Blue”, "DodgerBlue ", " Turquoise "]);
+        .range(["Navy", "MediumBlue", "Blue", "DodgerBlue ", " Turquoise "]);
 
     that = this;
     this.brush = d3.svg.brush()
@@ -68,7 +68,7 @@ Scatter.prototype.initVis = function () {
         .attr("class", "y axis")
         .append("text")
         .attr("transform", "translate(-50,0)rotate(-90)")
-        .attr("y", 20)
+        .attr("y", 15)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .style("font-size", 12)
