@@ -4,6 +4,7 @@
     <list default="true" id="6c24b876-269d-47f5-884c-d4133a85b41f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/countries.geo.json" afterPath="$PROJECT_DIR$/data/countries.geo.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/updated/Life_expectancy.csv" afterPath="$PROJECT_DIR$/data/updated/Life_expectancy.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +40,8 @@
       <file leaf-file-name="Life_expectancy.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/updated/Life_expectancy.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="287">
-              <caret line="253" column="1" lean-forward="true" selection-start-line="253" selection-start-column="1" selection-end-line="253" selection-end-column="14" />
+            <state relative-caret-position="236">
+              <caret line="250" column="14" lean-forward="false" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -49,8 +50,8 @@
       <file leaf-file-name="countries.geo.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/countries.geo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="172" column="60" lean-forward="false" selection-start-line="172" selection-start-column="51" selection-end-line="172" selection-end-column="64" />
+            <state relative-caret-position="171">
+              <caret line="170" column="64" lean-forward="false" selection-start-line="170" selection-start-column="64" selection-end-line="170" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -86,10 +87,10 @@
       <find>&quot;</find>
       <find>gdp</find>
       <find>SP.DYN.LE00.IN</find>
-      <find>United</find>
       <find>United States</find>
       <find>united</find>
       <find>Venezuela</find>
+      <find>United</find>
     </findStrings>
     <replaceStrings>
       <replace>card mb-4</replace>
@@ -233,7 +234,7 @@
       <workItem from="1543546418847" duration="1399000" />
       <workItem from="1543551441424" duration="573000" />
       <workItem from="1543630440144" duration="402000" />
-      <workItem from="1544063669822" duration="6150000" />
+      <workItem from="1544063669822" duration="6291000" />
     </task>
     <task id="LOCAL-00001" summary="Not ready">
       <created>1543015904559</created>
@@ -312,11 +313,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544070837492</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix Venezuela, RB in Life expectancy dataset">
+      <created>1544071017706</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1544071017706</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62218000" />
+    <option name="totallyTimeSpent" value="62359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="754" extended-state="0" />
@@ -360,7 +368,8 @@
     <MESSAGE value="Updated datasets" />
     <MESSAGE value="Updated datasets." />
     <MESSAGE value="Fix United States of America in Life expectancy dataset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix United States of America in Life expectancy dataset" />
+    <MESSAGE value="Fix Venezuela, RB in Life expectancy dataset" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Venezuela, RB in Life expectancy dataset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -723,16 +732,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/updated/Life_expectancy.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="287">
-          <caret line="253" column="1" lean-forward="true" selection-start-line="253" selection-start-column="1" selection-end-line="253" selection-end-column="14" />
+        <state relative-caret-position="236">
+          <caret line="250" column="14" lean-forward="false" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/countries.geo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="172" column="60" lean-forward="false" selection-start-line="172" selection-start-column="51" selection-end-line="172" selection-end-column="64" />
+        <state relative-caret-position="171">
+          <caret line="170" column="64" lean-forward="false" selection-start-line="170" selection-start-column="64" selection-end-line="170" selection-end-column="64" />
           <folding />
         </state>
       </provider>
