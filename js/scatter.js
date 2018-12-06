@@ -68,7 +68,7 @@ Scatter.prototype.initVis = function () {
         .attr("class", "y axis")
         .append("text")
         .attr("transform", "translate(-50,0)rotate(-90)")
-        .attr("y", 15)
+        .attr("y", 20)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .style("font-size", 12)
