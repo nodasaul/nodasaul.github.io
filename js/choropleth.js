@@ -117,7 +117,7 @@ Choropleth.prototype.updateVis = function () {
         .attr("y", 32);*/
 
     var legend = this.svg.selectAll(".legend")
-        .data([40, 50, 55, 60, 65, 70, 75, 80])
+        .data([50, 55, 60, 65, 70, 75, 80])
 
 
     legend
