@@ -373,7 +373,7 @@
         //load the data from csv
         var start_loading = function () {
             queue()
-                .defer(d3.csv, "data/life_expectancy.csv")
+                .defer(d3.csv, "data/updated/life_expectancy.csv")
                 .defer(d3.csv, "data/updated/Health_expenditure.csv")
                 .defer(d3.csv, "data/updated/Physicians_per_1000.csv")
                 .defer(d3.csv, "data/updated/gdp_percap.csv")
