@@ -145,7 +145,7 @@ Choropleth.prototype.updateVis = function () {
         .text(function (d) {
             return d;
         })
-        .attr("x", 17)
+        .attr("x", 15)
         .attr("y", -2)
 
 
