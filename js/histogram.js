@@ -1,9 +1,3 @@
-/**
- * Created by Hendrik Strobelt (hendrik.strobelt.com) on 1/28/15.
- */
-
-
-//TODO: DO IT ! :) Look at agevis.js for a useful structure
 
 Histogram = function (_parentElement, _data, _eventHandler) {
     this.parentElement = _parentElement;
@@ -73,9 +67,9 @@ Histogram.prototype.initVis = function () {
     this.brush_legend
         .append("rect")
         .style("fill", "steelblue")
-        .attr("x", 300)
+        .attr("x", 320)
         .attr("y", 0)
-        .attr("width", 40)
+        .attr("width", 50)
         .attr("height", 15)
 
 
