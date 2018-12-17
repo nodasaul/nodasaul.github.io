@@ -6,7 +6,7 @@ Histogram = function (_parentElement, _data, _eventHandler) {
     this.dp = this.data;
 
     //define all "constants" here
-    this.margin = {top: 20, right: 0, bottom: 130, left: 50},
+    this.margin = {top: 20, right: 0, bottom: 130, left: 55},
         this.width = 550 - this.margin.left - this.margin.right,
         this.height = 350 - this.margin.top - this.margin.bottom;
 
