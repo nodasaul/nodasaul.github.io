@@ -83,7 +83,7 @@ Histogram.prototype.initVis = function () {
         .append("text")
         .text("Brush")
         .style("fill", "white")
-        .attr("x", 302)
+        .attr("x", 320)
         .attr("y", 12);
 
     this.svg.append("g")
