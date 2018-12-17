@@ -55,7 +55,7 @@ Histogram.prototype.initVis = function () {
         .attr("class", "y axis")
         .append("text")
         .attr("transform", "translate(250,0)")
-        .attr("y", 6)
+        .attr("y", 5)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .style("font-size", 12);
@@ -77,7 +77,7 @@ Histogram.prototype.initVis = function () {
         .append("text")
         .text("Brush")
         .style("fill", "white")
-        .attr("x", 360)
+        .attr("x", 280)
         .attr("y", 10);
 
     this.svg.append("g")
